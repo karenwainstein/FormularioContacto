@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Contacto</legend>
+
+            <div class="input-container">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required pattern="[a-zA-Záéíóú\s]{3,40}">
+            </div>
+
+            <div class="input-container">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Dirección" required pattern="[a-zA-Z0-9.:-°áéíóú\s]{3,40}">
+            </div>
+
+            <div class="input-container">
+                <label for="telefono">Teléfono:</label>
+                <div class="telefono-grupo">
+                    <select name="codigo-pais" id="codigo-pais">
+                        <option value="+598">+598</option>
+                        <option value="+54">+54</option>
+                        <option value="+55">+55</option>
+                        <option value="+1">+1</option>
+                        <option value="+976">+976</option>
+                    </select>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" pattern="(09\d{7}|2\d{7}|33\d{5})">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" required pattern="[a-zA-Z0-9.-]+@[a-zA-Z]+\.[a-z]{2,3}">
+            </div>
+
+            <div class="input-container">
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe aquí tu mensaje"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

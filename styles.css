@@ -1,0 +1,151 @@
+:root {
+    --color-main: #630480;
+    --color-medium: #aaaaaa;
+    --color-heavy: #1f1f1f;
+    --color-light: #fff;
+}
+
+* {
+    margin: 0; 
+    padding: 0; box-sizing: 
+    border-box;
+}
+
+body {
+    background: #dedede;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: var(--color-light); 
+    margin: 40px auto; 
+    padding: 20px;
+    max-width: 420px;
+    border-radius: 8px;
+
+}
+
+
+fieldset {
+    display: flex; 
+    flex-direction: column;
+    gap: 16px; 
+    padding: 16px;
+    border: none;
+}
+
+legend {
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;
+    color: var(--color-light);
+    background-color: var(--color-main);
+    padding: 40px 145px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    border: none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    margin-bottom: 8px;
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;
+    color: var(--color-medium);
+}
+
+
+
+
+
+input:hover, select:hover, textarea:hover {border: solid 1px var(--color-heavy)}
+input:focus, select:focus, textarea:focus {border: solid 2px var(--color-main); outline: none;}
+input:valid {color: var(--color-heavy)}
+input:invalid:not(:placeholder-shown) {border: solid 2px red}
+
+.telefono-grupo {
+    display: flex;
+    gap: 8px; 
+    flex-basis: 100%;
+}
+
+.telefono-grupo select,
+.telefono-grupo input {
+    height: 56px; 
+    padding: 16px; 
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;
+    color: var(--color-medium);
+    border: solid 1px var(--color-medium);
+    border-radius: 4px;
+    flex: 1;
+}
+
+.telefono-grupo select {
+    max-width: 100px; 
+    flex-shrink: 0;
+}
+
+.telefono-grupo input {
+    flex-grow: 1;
+}
+
+<!-- input {
+    height: 56px; 
+    padding: 16px; 
+    flex-basis: 60%;
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;
+    color: var(--color-medium);
+    border: solid 1px var(--color-medium);
+    border-radius: 4px;
+
+} -->
+
+textarea {
+    flex-basis: 100%; 
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    padding: 1rem;
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;
+    color: var(--color-medium);
+    border: solid 1px var(--color-medium);
+    border-radius: 4px;
+
+
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    flex: 1;
+    height: 36px;
+    font: 400 16px "Roboto";
+    letter-spacing: .5px;  
+    background: var(--color-main);
+    border-radius: 4px;
+    color: var(--color-light);
+    border: none;
+    cursor: pointer;
+    }
+button:hover {
+    background: #47045c;
+}
+
+button:active {
+    background: #47045c; 
+}
